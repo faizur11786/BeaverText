@@ -1,0 +1,68 @@
+body {
+  overflow: hidden;
+}
+// onboarding Layout Section
+
+.onboarding__layout {
+  &--section {
+    @include contentCenter(flex, center, center);
+    min-height: calc(100vh - (52px + 50px));
+  }
+}
+
+.dashboard__layout {
+  width: 100%;
+  &--main {
+    min-height: calc(100vh - 60px);
+    @include contentCenter(flex, flex-start, flex-start);
+  }
+  &--section {
+    padding: 2rem;
+    padding-bottom: 0;
+    background-color: $light-blue;
+    width: calc(100% - 70px);
+    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    overflow: auto;
+  }
+  &--body {
+    min-height: calc(100vh - 150px);
+  }
+  &--container {
+    margin: 0 auto;
+    max-width: 1340px;
+    padding: 1rem;
+    padding-top: 0rem;
+    .onCard {
+      margin: 0 auto;
+    }
+  }
+}
+
+.page--title {
+  margin-bottom: 2rem;
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: $dark-blue;
+  }
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      padding-left: 0.5rem;
+      &:first-child {
+        padding-left: 0rem;
+        &::before {
+          display: none;
+        }
+      }
+      &::before {
+        float: left;
+        padding-right: 0.5rem;
+        color: #6c757d;
+        content: var(--bs-breadcrumb-divider, "/");
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+body {
+    font-family: $font-family;
+}
+
+label {
+    color: $dark-grey;
+}
+
+i,
+p,path {
+    color: $light-grey;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: $bash-color;
+    display: inline-block;
+    &:hover {
+        color: darken($bash-color, 5);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+    margin-bottom: 1rem;
+    font-family: $font-family;
+    line-height: unset;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: $dark-blue;
+}
+
+input,
+button {
+    letter-spacing: 0.25px;
+    font-size: 14px;
+    font-family: $font-family;
+}
+
+// button {
+//     letter-spacing: 0.25px;
+// }
+h3 {
+    color: $dark-blue;
+}
+
+li {
+    font-size: 14px;
+    color: darken($light-grey, 15);
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+    color: $dark-blue;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}

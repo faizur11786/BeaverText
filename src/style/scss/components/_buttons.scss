@@ -1,0 +1,170 @@
+.btn--block {
+  @include borderRadius;
+  border: none;
+  background-color: $bash-color;
+  color: $white;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 1rem 1rem;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    color: $white;
+    background-color: darken($bash-color, 5);
+  }
+}
+.schedule__btn {
+  background-color: $dark-blue !important;
+  path {
+    fill: $white;
+  }
+}
+
+.icon__btn {
+  @include borderRadius;
+  background-color: inherit;
+  border: 1px solid $bash-color;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: block;
+  padding: 0.75rem 1rem;
+  outline: none;
+  text-align: center;
+  position: relative;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  font-weight: 700;
+
+  &--icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.btn--p {
+  @include borderRadius;
+  margin-bottom: 0;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  background-color: $bash-color;
+  color: $white;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: pre;
+  &:hover {
+    color: $white;
+    background-color: darken($bash-color, 5);
+  }
+}
+
+.skip__btn {
+  color: $light-grey;
+  background-color: lighten($dark-blue, 70);
+  padding: 0 0.75rem;
+  font-weight: normal;
+  border-radius: 4px;
+  // transition: all 0.3s ease-in;
+  float: right;
+  &:hover {
+    background-color: lighten($dark-blue, 65);
+  }
+}
+
+.cancel__btn {
+  @include borderRadius;
+  padding: 0.4rem 1.25rem;
+  border: 1px solid $bash-color;
+  background-color: lighten($bash-color, 45);
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($bash-color, 40);
+  }
+}
+
+.inline__btns {
+  @include contentCenter($justify: space-between, $align: center);
+  margin-top: 1rem;
+}
+
+.btn--s {
+  @include borderRadius;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid $bash-color;
+  background-color: lighten($bash-color, 45);
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($bash-color, 40);
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: $light-grey;
+
+  pointer-events: none;
+  background-color: lighten($light-grey, 20);
+  &:hover {
+    color: $light-grey;
+    background-color: lighten($light-grey, 20);
+  }
+}
+
+.circle__icon--btn {
+  @include borderRadius(50%, 50%, 50%, 50%);
+  @include contentCenter($justify: center, $align: center);
+  width: 40px;
+  height: 40px;
+  background-color: lighten($bash-color, 45);
+  margin-right: 1.5rem;
+  &.active {
+    background-color: $bash-color;
+    &:hover {
+      background-color: lighten($bash-color, 5);
+    }
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.qMs__btn {
+  @include borderRadius(30px, 30px, 30px, 30px);
+  @include contentCenter($justify: center, $align: center);
+  margin-right: 1.5rem;
+  color: $white;
+  padding: 0.6rem 1.1rem;
+  span {
+    margin-right: 0.5rem;
+  }
+  &:hover {
+    color: $white;
+  }
+  &.active {
+    background-color: $bash-color;
+    path {
+      color: $white;
+    }
+    &:hover {
+      background-color: lighten($bash-color, 5);
+    }
+  }
+}
+
+.tableBtnGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

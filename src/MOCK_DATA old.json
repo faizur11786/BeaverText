@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "sender_number": "3889600212",
+    "sender_nickname": "Domingo",
+    "outbound": 960,
+    "inbound": 744,
+    "opt_out": 6213
+  },
+  {
+    "id": 2,
+    "sender_number": "6185421822",
+    "sender_nickname": "Giustina",
+    "outbound": 787,
+    "inbound": 964,
+    "opt_out": 8646
+  },
+  {
+    "id": 3,
+    "sender_number": "3324333864",
+    "sender_nickname": "Analise",
+    "outbound": 503,
+    "inbound": 909,
+    "opt_out": 6729
+  },
+  {
+    "id": 4,
+    "sender_number": "7757055676",
+    "sender_nickname": "Selig",
+    "outbound": 546,
+    "inbound": 713,
+    "opt_out": 5823
+  },
+  {
+    "id": 5,
+    "sender_number": "7868192667",
+    "sender_nickname": "Orv",
+    "outbound": 715,
+    "inbound": 971,
+    "opt_out": 5896
+  }
+]

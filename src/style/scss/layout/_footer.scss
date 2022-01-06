@@ -1,0 +1,16 @@
+// onboarding Layout Footer
+.onboarding__layout {
+    &--footer {
+        text-align: center;
+        min-height: 50px;
+        font-size: 14px;
+    }
+}
+
+.dashboard__layout {
+    &--footer {
+        min-height: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+}

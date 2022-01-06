@@ -1,0 +1,115 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+// .clear-user-agent-styles table,
+// .clear-user-agent-styles thead,
+// .clear-user-agent-styles tbody,
+// .clear-user-agent-styles tfoot,
+// .clear-user-agent-styles tr,
+// .clear-user-agent-styles th,
+// .clear-user-agent-styles td {
+//     display: block;
+//     width: auto;
+//     height: auto;
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     border-collapse: inherit;
+//     border-spacing: 0;
+//     border-color: inherit;
+//     vertical-align: inherit;
+//     text-align: left;
+//     font-weight: inherit;
+//     -webkit-border-horizontal-spacing: 0;
+//     -webkit-border-vertical-spacing: 0;
+// }
+// th,
+// td {
+//     display: inline;
+// }
+.daterangepicker {
+    .ranges {
+        ul {
+            li {
+                &:hover {
+                    background-color: lighten($bash-color, 48);
+                }
+                &.active {
+                    background-color: $bash-color;
+                }
+            }
+        }
+    }
+    .drp-calendar {
+        .available {
+            &:hover {
+                background-color: lighten($bash-color, 43);
+            }
+        }
+        .in-range {
+            background-color: lighten($bash-color, 43);
+            &:hover {
+                background-color: lighten($bash-color, 45);
+            }
+        }
+        .start-date,
+        .end-date {
+            background-color: $bash-color;
+            &:hover {
+                background-color: $bash-color;
+            }
+        }
+    }
+    .drp-buttons {
+        padding: 0.75rem 1rem;
+        .drp-selected {
+            color: $dark-blue;
+            font-family: $font-family;
+            font-size: 14px;
+        }
+        button {
+            @include borderRadius;
+            margin: 0;
+            border: none;
+            padding: 0.45rem 0.75rem !important;
+            cursor: pointer;
+            &.btn-primary {
+                background-color: $bash-color;
+                color: $white;
+            }
+        }
+    }
+}

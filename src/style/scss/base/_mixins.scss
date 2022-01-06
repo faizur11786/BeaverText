@@ -1,0 +1,61 @@
+@mixin contentCenter(
+  $display: flex,
+  $justify: space-between,
+  $align: flex-start
+) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin addBorder {
+}
+
+@mixin borderRadius($tl: 4px, $tr: 4px, $br: 4px, $bl: 4px) {
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}
+
+@mixin cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid lighten($bash-color, 45);
+  h3 {
+    margin: 0;
+  }
+}
+
+@mixin usersRole {
+  .role {
+    @include borderRadius;
+    padding: 0.1rem 0.5rem;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -1px;
+    display: block;
+    &.user {
+      background-color: $bash-color;
+      color: $white;
+      &.lebalStyle1 {
+        padding: 0.2rem 0.75rem;
+        border: 1px solid $bash-color;
+        background-color: transparent;
+        color: $bash-color;
+      }
+    }
+    &.manager {
+      background-color: $dark-blue;
+      color: $white;
+      &.lebalStyle1 {
+        padding: 0.2rem 0.75rem;
+        border: 1px solid $dark-blue;
+        background-color: transparent;
+        color: $dark-blue;
+      }
+    }
+  }
+}

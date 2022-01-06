@@ -1,0 +1,14 @@
+.tippy {
+  &-tooltip {
+    background-color: $dark-blue !important;
+  }
+  &-popper[x-placement^="top"] [x-arrow] {
+    border-top-color: $dark-blue !important;
+  }
+  &-popper[x-placement^="right"] [x-arrow] {
+    border-right-color: $dark-blue !important;
+  }
+  &-popper[x-placement^="left"] [x-arrow] {
+    border-left-color: $dark-blue !important;
+  }
+}

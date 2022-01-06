@@ -1,0 +1,457 @@
+.page--title {
+  h3 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.col__heading {
+  font-size: 20px;
+}
+.card__group {
+  display: grid;
+  gap: 1rem;
+  //   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  &--item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &.col2 {
+      grid-column: span 2;
+    }
+    &.col3 {
+      grid-column: span 3;
+    }
+    &.col4 {
+      grid-column: span 4;
+      @media (max-width: 1020px) {
+        grid-column: span 6;
+      }
+      @media (max-width: 745px) {
+        grid-column: span 12;
+      }
+    }
+    &.col5 {
+      grid-column: span 5;
+    }
+    &.col6 {
+      grid-column: span 6;
+    }
+    &.col8 {
+      grid-column: span 8;
+      @media (max-width: 1020px) {
+        grid-column: span 12;
+      }
+    }
+    &.col10 {
+      grid-column: span 10;
+    }
+    &.col12 {
+      grid-column: span 12;
+    }
+    .card {
+      background-color: $white;
+      margin: 0;
+      height: 100%;
+      &__header {
+        @include cardHeader;
+        background-color: lighten($bash-color, 45);
+      }
+      &__body {
+        padding: 0;
+        max-height: 300px;
+        overflow: auto;
+      }
+      &__footer {
+        background: lighten($bash-color, 45);
+        padding: 1rem;
+      }
+      @include usersRole;
+    }
+  }
+}
+
+.dataList {
+  &__item {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid lighten($bash-color, 46);
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background: lighten($bash-color, 48.1);
+    }
+    &.active {
+      background-color: lighten($bash-color, 40);
+    }
+    &.contact {
+      span {
+        letter-spacing: 0.25px;
+        font-size: 14px;
+      }
+      .right {
+      }
+    }
+    button {
+      &.btn--p {
+        cursor: pointer;
+      }
+      &.btnStyle1 {
+        border: 1px solid $bash-color;
+        background-color: transparent;
+        color: $bash-color;
+        &:hover {
+          color: $bash-color;
+          background-color: lighten($bash-color, 40);
+        }
+      }
+    }
+    &.campaign {
+      p {
+        &.btn--p {
+          cursor: default;
+        }
+        &.lebalStyle1 {
+          border: 1px solid $bash-color;
+          background-color: transparent;
+          color: $bash-color;
+        }
+      }
+    }
+    &.campaign,
+    &.contact,
+    &.user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      a {
+        display: block;
+        color: $dark-blue;
+      }
+      p {
+        margin: 0;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+        width: 100%;
+        padding-top: 0.1rem;
+        span {
+          font-size: 14px;
+          white-space: nowrap;
+          color: darken($light-grey, 10);
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+        span {
+          font-size: 14px;
+          white-space: nowrap;
+          color: darken($light-grey, 10);
+        }
+      }
+
+      .btn--p {
+        padding: 0.2rem 0.75rem;
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+  }
+  .latestNumber {
+    &__body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .right,
+      .left {
+        p {
+          text-transform: capitalize;
+          margin: 0;
+          color: darken($light-grey, 4);
+          font-size: 14px;
+          margin: 0;
+        }
+        span {
+          font-size: 14px;
+          text-transform: capitalize;
+          color: darken($light-grey, 20);
+          font-weight: 600;
+        }
+      }
+    }
+    a {
+      display: block;
+      color: $dark-blue;
+      // margin-bottom: 0.2rem;
+    }
+  }
+}
+
+.link__card {
+  &:hover {
+    background-color: lighten($bash-color, 45);
+  }
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  &--icon {
+    margin-bottom: 0.5rem;
+  }
+}
+.messageBody {
+  padding-bottom: 0 !important;
+}
+.message {
+  &__footer {
+    padding: 1rem;
+  }
+  .message__chat {
+    padding: 1.25rem;
+    &--content {
+      @include borderRadius();
+      width: fit-content;
+      max-width: calc(100% - 100px);
+      background-color: lighten($light-grey, 20);
+      padding: 0.75rem;
+      border: 1px solid lighten($light-grey, 20);
+      font-size: 14px;
+      color: $dark-grey;
+    }
+    &--timing {
+      font-size: 12px;
+      color: $light-grey;
+      margin-top: 0.25rem;
+    }
+    &--msg {
+      height: 197px;
+      overflow: auto;
+      padding-right: 1rem;
+      padding: 1rem;
+      li {
+        margin-bottom: 1rem;
+      }
+      .sender {
+        .message__chat--content {
+          background-color: transparent;
+          color: $white;
+          margin-left: auto;
+          border: 1px solid $bash-color;
+          color: $bash-color;
+        }
+        .message__chat--timing {
+          text-align: right;
+        }
+      }
+    }
+    &--form {
+      @include contentCenter($align: center);
+      .input__field {
+        margin-bottom: 0;
+        width: stretch;
+        padding-right: 0.5rem;
+      }
+    }
+    &--btnsGroup {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 0.5rem;
+    }
+    &--btnsItme {
+      button {
+        @include contentCenter($display: center, $justify: center);
+        @include borderRadius(50%, 50%, 50%, 50%);
+        border: none;
+        margin-bottom: 0;
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+        border: 1px solid $bash-color;
+        background-color: transparent;
+        path {
+          fill: $bash-color;
+        }
+        &:hover {
+          color: $bash-color;
+          background-color: lighten($bash-color, 40);
+        }
+      }
+    }
+  }
+}
+.messageBox {
+  display: flex;
+  flex-direction: row;
+  &__body {
+    .card__body {
+      display: flex;
+    }
+    .left {
+      min-width: 250px;
+      max-height: 300px;
+      overflow: auto;
+      position: relative;
+      &__body {
+        // height: 518px;
+        overflow: auto;
+        .dataList {
+          padding-bottom: 1rem;
+        }
+      }
+      &::before {
+        content: "";
+        display: block;
+        background-color: lighten($bash-color, 45);
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        right: 0rem;
+      }
+    }
+    .right {
+      width: 100%;
+    }
+    .right,
+    .left {
+      &__header {
+        @include cardHeader;
+        background-color: lighten($bash-color, 45);
+      }
+    }
+    .latestNumber {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.35rem;
+        padding-top: 0.1rem;
+      }
+      h4 {
+        margin: 0;
+      }
+      span {
+        font-size: 14px;
+        white-space: nowrap;
+        color: darken($light-grey, 10);
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+        &.btn--p {
+          cursor: default;
+          padding: 0.2rem 0.5rem;
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: normal;
+        }
+        &.lebalStyle1 {
+          border: 1px solid $bash-color;
+          background-color: transparent;
+          color: $bash-color;
+        }
+      }
+      &__body {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.numbersBox {
+  .latestNumber {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    .left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+      h4 {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        svg {
+          height: 1rem;
+        }
+      }
+    }
+    .outgoing {
+      path {
+        fill: $bash-color;
+      }
+    }
+    .outoutIcon {
+      path {
+        fill: $error;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+      // border: 1px solid red;
+      min-width: 100px;
+      h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+    .dataItem {
+      width: 100%;
+      position: relative;
+      span {
+        text-transform: capitalize;
+      }
+      &::before {
+        content: "";
+        display: block;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translate(-50%, -50%);
+        width: 1px;
+        background-color: lighten($bash-color, 44);
+      }
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    h4 {
+      margin: 0;
+    }
+    h3 {
+      margin-bottom: 0rem;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+    span {
+      font-size: 14px;
+      text-transform: capitalize;
+      color: darken($light-grey, 20);
+    }
+  }
+}
